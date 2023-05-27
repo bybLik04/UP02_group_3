@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="plotting_func.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="approx_2dg.py">
       <SubType>Code</SubType>
     </Compile>
@@ -72,6 +75,9 @@
     <Content Include="views\authors.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\plotting.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\layout2.tpl" />
   </ItemGroup>
   <ItemGroup>

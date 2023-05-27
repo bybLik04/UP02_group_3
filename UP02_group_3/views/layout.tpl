@@ -18,12 +18,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">Application name</a>
+                <a href="/home" class="navbar-brand">Р“Р»Р°РІРЅР°СЏ</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home">Главная</a></li>
-                    <li><a href="/authors">Об авторах</a></li>
+                    <li><a href="/authors">РћР± Р°РІС‚РѕСЂР°С…</a></li>
                 </ul>
             </div>
         </div>

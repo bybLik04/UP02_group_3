@@ -15,7 +15,7 @@
             <div class="phc">
                 <div class="pagelogos">
                     <a href="/" class="headerlogotext">
-                        <img alt="Math Solver" src="static\images\logo.png" class="headerlogo">
+                        <img alt="Math Solver" src="static\images\logo2.png" class="headerlogo">
                         <span class="headertext">Math Solver</span>
                     </a>
                 </div>

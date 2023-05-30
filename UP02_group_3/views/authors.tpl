@@ -27,7 +27,7 @@
             <p>
                 <button class="backgroundc img hr">
                     <a href="https://vk.com/id164639396" target="_blank">
-                        <img src="static\images\kirill.png" class="img-responsive">
+                        <img src="static\images\kirill.jpg" class="img-responsive">
                     </a>
                 </button>
             </p>

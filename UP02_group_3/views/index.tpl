@@ -28,11 +28,8 @@
 					<div class="mainpage">
 						<div class="ImageParagraph-section">
 							<div class="content">
-								<div>
-									<picture class>
-										<img style="width:300px" src="static\images\var1.jpg" alt="Макс">
-									</picture>
-								</div>
+								<canvas id="graph"></canvas>
+								
 								<div class="text">
 									<h3 class="title">
 										Графический конструктор
@@ -55,20 +52,12 @@
 										табличной функции с помощью линейного многочлена первой степени. 
 									</div>
 								</div>
-								<div>
-									<picture class>
-										<img style="width:300px" src="static\images\var2.jpg" alt="Макс">
-									</picture>
-								</div>
+								<svg id="chart"></svg>
 							</div>
 						</div>
 						<div class="ImageParagraph-section">
 							<div class="content">
-								<div>
-									<picture class>
-										<img style="width:300px" src="static\images\var3.jpg" alt="Макс">
-									</picture>
-								</div>
+								<canvas id="square"></canvas>
 								<div class="text">
 									<h3 class="title">
 										Квадратичная регрессия

@@ -37,7 +37,11 @@
         
     </div>
     
-       
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/scripts/graph.js"</script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/static/scripts/linear.js"</script>
+    <script src="/static/scripts/square.js"</script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>

@@ -13,6 +13,11 @@ function calculateFunction(coefficients, x) {
     return a0 + a1 * x + a2 * x * x;
 }
 
+function calculateFunction2(coefficients, x) {
+    const { a0, a1} = coefficients;
+    return a0 + a1 * x;
+}
+
 // Построение графика
 function plotGraph(coefficients, canvasId) {
     const canvas = document.getElementById(canvasId);
@@ -50,7 +55,44 @@ function plotGraph(coefficients, canvasId) {
     });
 }
 
+function plotGraph2(coefficients, canvasId) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext('2d');
+
+    const data = [];
+    for (let x = 0; x <= 10; x += 0.1) {
+        const y = calculateFunction2(coefficients, x);
+        data.push({ x, y });
+    }
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Аппроксимированная функция',
+                data: data,
+                borderColor: 'blue',
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                },
+                y: {
+                    type: 'linear',
+                    position: 'left'
+                }
+            }
+        }
+    });
+}
+
 // Табличные данные (x и y)
+
 const tableData = [
     { x: 1, y: 3 },
     { x: 2, y: 5 },
@@ -118,7 +160,7 @@ plotGraph(coefficients, 'square');
 // Генерация случайных коэффициентов, вычисление линейной линии регрессии и построение графика
 const regressionCoefficients = calculateRegressionCoefficients();
 const r2 = calculateR2(regressionCoefficients);
-plotGraph(regressionCoefficients, 'linear');
+plotGraph2(regressionCoefficients, 'linear');
 
 console.log('Коэффициенты линейной линии регрессии:', regressionCoefficients);
 console.log('Коэффициент детерминированности R^2:', r2);

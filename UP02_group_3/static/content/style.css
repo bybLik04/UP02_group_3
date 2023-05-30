@@ -67,6 +67,52 @@
     background-color: #a30900;
     border-color: #000000;
 }
+body {
+    color: #141414;
+    background: #f2f7f7;
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+button {
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    font-size: inherit;
+}
+
+.t1 {
+    color: #444;
+}
+
+.t2 {
+    color: #585858;
+}
+
+.tint {
+    color: #137486;
+}
+
+.hidden,
+.h {
+    display: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+}
 
 .page-header {
     height: 75px;
@@ -86,52 +132,12 @@
         justify-content: space-between;
     }
 
-        .page-header .phc .ham {
-            display: none;
-        }
-
-            .page-header .phc .ham img {
-                margin: 16px 20px;
-                width: 16px;
-                height: 12px;
-            }
-
-        .page-header .phc .ham-close img {
-            margin: 16px 20px;
-            width: 16px;
-            height: 16px;
-        }
-
-        .page-header .phc .app-logo img {
-            height: 30px;
-            padding: 0px;
-        }
-
-        .page-header .phc .brand {
-            display: flex;
-            align-items: center;
-            padding-left: 12px;
-        }
-
-        .page-header .phc .name {
-            padding: 12px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .page-header .phc .link {
-            padding: 8px 16px;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 20px;
-        }
-
 .pagelogos {
     text-align: left;
-    font-family: var(--fontFamilyBase);
-    font-size: var(--fontSizeBase300);
-    font-weight: var(--fontWeightRegular);
-    line-height: var(--lineHeightBase300);
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 300;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -141,10 +147,10 @@
 .headerlogotext {
     -webkit-font-smoothing: antialiased;
     text-align: left;
-    font-family: var(--fontFamilyBase);
-    font-size: var(--fontSizeBase300);
-    font-weight: var(--fontWeightRegular);
-    line-height: var(--lineHeightBase300);
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 300;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -156,10 +162,10 @@
 .headerlogo {
     -webkit-font-smoothing: antialiased;
     text-align: left;
-    font-family: var(--fontFamilyBase);
-    font-size: var(--fontSizeBase300);
-    font-weight: var(--fontWeightRegular);
-    line-height: var(--lineHeightBase300);
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 300;
     color: inherit;
     cursor: pointer;
     display: block;
@@ -170,8 +176,8 @@
 .headertext {
     -webkit-font-smoothing: antialiased;
     text-align: left;
-    font-family: var(--fontFamilyBase);
-    line-height: var(--lineHeightBase300);
+    font-family: Segoe UI;
+    line-height: 20px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 500;
@@ -182,7 +188,7 @@
 .headerlink {
     -webkit-font-smoothing: antialiased;
     text-align: left;
-    font-family: var(--fontFamilyBase);
+    font-family: 'Segoe UI';
     text-decoration: none;
     color: inherit;
     padding: 8px 16px;
@@ -260,7 +266,81 @@
 [dir="rtl"] .page-layout > .m .c1 {
     margin: 0 12px 0 0;
 }
+.mainpage {
+    padding: 0 56px 40px;
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+}
+.ImageParagraph-section {
+    padding-top: 40px;
+}
+    .ImageParagraph-section .content {
+        max-width: 900px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+        .ImageParagraph-section > .content .text {
+            flex-grow: 1;
+            margin: 0 auto;
+            padding-right: 120px;
+        }
+            .ImageParagraph-section > .content .text .title {
+                color: #252525;
+                font-family: Segoe UI;
+                margin: 0;
+                font-weight: 700;
+                opacity: .95;
+                margin-top: 20px;
+                font-size: 28px;
+                text-align: left;
+                margin-bottom: 0;
+                line-height: 34px;
+                padding: 0 0 2px;
+            }
 
+            .ImageParagraph-section > .content .text .paragraph {
+                color: #252525;
+                font-family: Segoe UI;
+                font-size: 16px;
+                font-weight: 400;
+                max-width: 80%;
+                text-align: left;
+                line-height: 20px;
+                padding: 12px 0 0;
+            }
+
+        .ImageParagraph-section > .content .revtext {
+            flex-grow: 1;
+            margin: 0 auto;
+            padding-left: 120px;
+        }
+            .ImageParagraph-section > .content .revtext .revtitle {
+                color: #252525;
+                font-family: Segoe UI;
+                margin: 0;
+                font-weight: 700;
+                opacity: .95;
+                margin-top: 20px;
+                font-size: 28px;
+                text-align: left;
+                margin-bottom: 0;
+                line-height: 34px;
+                padding: 0 0 2px;
+            }
+            .ImageParagraph-section > .content .revtext .revparagraph {
+                color: #252525;
+                font-family: Segoe UI;
+                font-size: 16px;
+                font-weight: 400;
+                max-width: 80%;
+                text-align: left;
+                line-height: 20px;
+                padding: 12px 0 0;
+            }
+            
 #mnav {
     z-index: 30;
     position: fixed;

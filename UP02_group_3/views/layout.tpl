@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
-<body class="backgroundc">
+<body>
     <header>
         <div class="page-header">
             <div class="phc">
@@ -34,12 +34,13 @@
 
     <div class="container body-content">
         {{!base}}
-        <hr />
+        
+    </div>
+    
         <footer>
+            <hr />
             <p>&copy; {{ year }} - Math Solver</p>
         </footer>
-    </div>
-
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>

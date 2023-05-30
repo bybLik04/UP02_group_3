@@ -6,27 +6,23 @@
     <title>{{ title }} - Онлайн калькулятор</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
-
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/home" class="navbar-brand">Главная</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/authors">Об авторах</a></li>
-                </ul>
+<body class="backgroundc">
+    <header>
+        <div class="page-header">
+            <div class="phc">
+                <div class="pagelogos">
+                    <a href="/" class="headerlogotext">
+                        <img alt="Math Solver" src="static\images\logo.png" class="headerlogo">
+                        <span class="headertext">Math Solver</span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+    
 
     <div class="container body-content">
         {{!base}}

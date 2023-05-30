@@ -13,37 +13,45 @@
     
 </head>
 <body>
-    <header>
-        <div class="page-header">
-            <div class="phc">
-                <div class="pagelogos">
-                    <a href="/" class="headerlogotext">
-                        <img alt="Math Solver" src="static\images\logo2.png" class="headerlogo">
-                        <span class="headertext">Math Solver</span>
-                    </a>
+    <div id="next">
+        <div style="display:flex;flex-direction:column;height:100vh">
+            <header>
+                <div class="page-header">
+                    <div class="phc">
+                        <div class="pagelogos">
+                            <a href="/" class="headerlogotext">
+                                <img alt="Math Solver" src="static\images\logo.png" class="headerlogo">
+                                <span class="headertext">Math Solver</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/home" class="headerlink">
+                            <span>Главная</span>
+                        </a>
+                        <a href="/authors" class="headerlink">
+                            <span>Об авторах</span>
+                        </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="/home" class="headerlink">
-                    <span>Главная</span>
-                </a>
-                <a href="/authors" class="headerlink">
-                    <span>Об авторах</span>
-                </a>
-                </div>
+            </header>
+            <div class="page-layout-container">
+            {{!base}}
             </div>
+            <footer class="SiteFooter">
+                <div class="container">
+                    <div class="content">
+                        <ul>
+                            <li>@Math Solver 2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </header>
-    
-
-    <div class="container body-content">
-        {{!base}}
-        
     </div>
-    
     <script src="/static/scripts/plotting.js"</script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-
 </body>
 </html>

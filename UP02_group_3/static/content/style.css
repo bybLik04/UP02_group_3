@@ -469,47 +469,65 @@ button {
         }
 }
 
-
-body[data-theme='dark'] {
-    background: #121212;
-    color: #fff;
-}
-
-[data-theme='dark'] .t1 {
-    color: #ddd;
-}
-
-[data-theme='dark'] .t2 {
-    color: #ccc;
-}
-
-[data-theme='dark'] .tint {
-    color: #1F9FB7;
-}
-
-[data-theme='dark'] .page-header {
-    background-color: #2e4462;
-}
-
-[data-theme='dark'] .page-layout > .m .c > div {
-    background: rgba(255,255,255,0.09);
-}
-
-[data-theme='dark'] .page-header .phc .link {
-    color: #fff;
-}
-
-[data-theme='dark'] .card {
-    background: rgba(255,255,255,0.09);
-}
-
-#__next {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 canvas {
     max-width: 300px;
     max-height: 300px;
+}
+
+footer {
+    display: block;
+}
+
+.SiteFooter {
+    background: #fff;
+    flex-shrink: 0;
+}
+
+    .SiteFooter .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: end;
+        margin: 0 auto;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .SiteFooter .content {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+        .SiteFooter .content ul {
+            padding: 0;
+            list-style: none;
+            list-style-position: outside;
+            list-style-type: none;
+            text-align: left;
+            margin: 12px 0 3px;
+        }
+            .SiteFooter .content ul li {
+                list-style: none;
+                list-style-position: outside;
+                list-style-type: none;
+                font-size: 11px;
+                line-height: 16px;
+                display: inline-block;
+                padding: 0 24px 4px 0;
+            }
+
+.page-layout-container {
+    background: #F0F6F6;
+    flex: 1 0 auto;
+}
+
+#next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

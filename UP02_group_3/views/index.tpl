@@ -55,6 +55,9 @@
 										табличной функции с помощью линейного многочлена первой степени. 
 										<a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
 									</div>
+									<div>
+										<a href="/approx1" class="calc-btn">Решить</a>
+									</div>
 								</div>
 								<canvas id="linear"></canvas>
 							</div>
@@ -70,6 +73,9 @@
 										В данном разделе применяется метод наименьших квадратов для аппроксимации 
 										таблично заданной функции с помощью квадратичного многочлена второй степени. 
 										<a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
+									</div>
+									<div>
+										<a href="/approx2" class="calc-btn">Решить</a>
 									</div>
 								</div>
 							</div>

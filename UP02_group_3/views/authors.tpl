@@ -11,14 +11,18 @@
 							<div class="content">
 								<div class="revtext">
 									<h3 class="revtitle">
-										Линейная регрессия
+										Кирилл Рыхлов
 									</h3>
 									<div class="revparagraph">
 										В этом разделе используется метод наименьших квадратов для аппроксимации заданной 
 										табличной функции с помощью линейного многочлена первой степени. 
 									</div>
 								</div>
-								
+								<div>
+									<picture class>
+										<img style="width:300px" src="static\images\kirill.jpg">
+									</picture>
+								</div>
 							</div>
 						</div>
 						<div class="ImageParagraph-section">
@@ -26,11 +30,16 @@
 								<canvas id="square"></canvas>
 								<div class="text">
 									<h3 class="title">
-										Квадратичная регрессия
+										Максим Тугунов
 									</h3>
 									<div class="paragraph">
 										В данном разделе применяется метод наименьших квадратов для аппроксимации 
 										таблично заданной функции с помощью квадратичного многочлена второй степени.
+									</div>
+									<div>
+										<picture class>
+											<img style="width:300px" src="static\images\maksim.jpg">
+										</picture>
 									</div>
 								</div>
 							</div>
@@ -39,14 +48,18 @@
 							<div class="content">
 								<div class="revtext">
 									<h3 class="revtitle">
-										Линейная регрессия
+										Михаил Назаров
 									</h3>
 									<div class="revparagraph">
 										В этом разделе используется метод наименьших квадратов для аппроксимации заданной 
 										табличной функции с помощью линейного многочлена первой степени. 
 									</div>
 								</div>
-								<svg id="chart"></svg>
+								<div>
+									<picture class>
+										<img style="width:300px" src="static\images\misha.jpg">
+									</picture>
+								</div>
 							</div>
 						</div>
 					</div>

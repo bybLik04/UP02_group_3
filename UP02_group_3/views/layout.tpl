@@ -43,6 +43,7 @@
                 <div class="container">
                     <div class="content">
                         <ul>
+                            <li><a href="/authors">О нас</a></li>
                             <li>@Math Solver 2023</li>
                         </ul>
                     </div>

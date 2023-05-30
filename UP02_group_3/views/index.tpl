@@ -36,7 +36,7 @@
 									<div class="paragraph">
 										  Этот раздел предоставляет пользователю возможность выбрать из списка функцию для построения графика. 
 										  Пользователь может настроить коэффициенты и отрезок, на котором будет строиться график.
-										  <a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
+										  <a href="https://interneturok.ru/lesson/algebra/11-klass/bzadachi-iz-egeb/urok-13-postroenie-i-preobrazovanie-grafikov-funktsiy-obzor-grafikov-osnovnyh-funktsiy-teoriya">Подробнее.</a>
 									</div>
 									<div>
 										<a href="/plott" class="calc-btn">Решить</a>
@@ -53,7 +53,7 @@
 									<div class="revparagraph">
 										В этом разделе используется метод наименьших квадратов для аппроксимации заданной 
 										табличной функции с помощью линейного многочлена первой степени. 
-										<a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
+										<a href="https://habr.com/ru/articles/514818/">Подробнее.</a>
 									</div>
 									<div>
 										<a href="/approx1" class="calc-btn">Решить</a>
@@ -72,10 +72,10 @@
 									<div class="paragraph">
 										В данном разделе применяется метод наименьших квадратов для аппроксимации 
 										таблично заданной функции с помощью квадратичного многочлена второй степени. 
-										<a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
+										<a href="https://studfile.net/preview/8891630/page:15/">Подробнее.</a>
 									</div>
 									<div>
-										<a href="/approx2" class="calc-btn">Решить</a>
+										<a type="submit" class="calc-btn">Решить</a>
 									</div>
 								</div>
 							</div>

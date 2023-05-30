@@ -26,7 +26,28 @@
 			<div class="c">
 				<div class="c0">
 					<div class="mainpage">
-						
+						<div class="ImageParagraph-section">
+							<div class="content">
+								<canvas id="graph"></canvas>
+								<div class="text">
+									<form action="/approx1" method="post">
+										<div class="approx">
+											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел" required>
+											<input class="input1" name="Y" placeholder="Значение Y, через пробел" required>
+										</div>
+										<div>
+											<input type="submit" class="calc-btn" value="Решить">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="ImageParagraph-section">
+							<div>
+								<label class="solve-text">Решение:</label>
+								<label class="solve"></label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

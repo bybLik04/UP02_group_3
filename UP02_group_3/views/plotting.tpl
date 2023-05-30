@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title='Home Page', year=year)
+% rebase('layout.tpl', title=title, year=year)
 
 <div class="page-layout">
 	<div class="l">
@@ -32,5 +32,5 @@
 			</div>
 		</main>
 	</div>
-<div>
+</div>
 

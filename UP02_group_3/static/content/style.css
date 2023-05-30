@@ -479,10 +479,9 @@ footer {
 }
 
 .SiteFooter {
-    background: #fff;
+    background: white;
     flex-shrink: 0;
 }
-
     .SiteFooter .container {
         display: flex;
         flex-wrap: wrap;
@@ -520,6 +519,10 @@ footer {
                 display: inline-block;
                 padding: 0 24px 4px 0;
             }
+        .SiteFooter .content a {
+            text-decoration: none;
+            color: inherit;
+        }
 
 .page-layout-container {
     background: #F0F6F6;
@@ -529,5 +532,5 @@ footer {
 #next {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }

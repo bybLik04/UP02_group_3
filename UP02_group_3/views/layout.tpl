@@ -9,8 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div id="next">
@@ -35,9 +34,11 @@
                     </div>
                 </div>
             </header>
+
             <div class="page-layout-container">
-            {{!base}}
+                {{!base}}
             </div>
+
             <footer class="SiteFooter">
                 <div class="container">
                     <div class="content">
@@ -49,6 +50,15 @@
             </footer>
         </div>
     </div>
+
+    <script> 
+        $(document).ready(function() { 
+          $('.content picture img').hide(); // Сначала скрываем картинку 
+          $('.content picture img').css({opacity: 0, marginTop: '20px'}); // Устанавливаем начальные стили
+
+          $('.content picture img').slideDown(1000).animate({ opacity: 1 }, 1000); // Применяем анимации для сдвига вниз и плавного появления
+        }); 
+    </script>
     <script src="/static/scripts/plotting.js"</script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>

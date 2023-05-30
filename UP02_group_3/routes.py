@@ -10,6 +10,7 @@ from datetime import datetime
 @view('index')
 def home():
     return dict(
+        title='Главная',
         year=datetime.now().year
     )
 
@@ -17,7 +18,7 @@ def home():
 @view('authors')
 def authors():
     return dict(
-        title='authors',
+        title='Об авторах',
         message='Об авторах',
         year=datetime.now().year
     )
@@ -35,7 +36,7 @@ def authors():
 @view('plotting')
 def authors():
     return dict(
-        title='plotting',
+        title='Построение графиков',
         message='Построение графиков',
         year=datetime.now().year
     )

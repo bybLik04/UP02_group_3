@@ -14,7 +14,7 @@
 					<span>Линейная регрессия</span>
 				</a>
 				<div class="separator"></div>
-				<a style="background:#bcc3c4"> 
+				<a style="background: #d7d7d7"> 
 					<img src="static\images\square.png" alt="квадратичная регрессия">
 					<span>Квадратичная регрессия</span>
 				</a>

@@ -1,5 +1,61 @@
 % rebase('layout.tpl', title=title, year=year)
 
+<div class="page-layout">
+	<div id="main" class="m">
+		<main>
+			<div class="c">
+				<div class="c0">
+					<div class="mainpage">
+						<div class="ImageParagraph-section">
+							<div class="content">
+								<div class="revtext">
+									<h3 class="revtitle">
+										Линейная регрессия
+									</h3>
+									<div class="revparagraph">
+										В этом разделе используется метод наименьших квадратов для аппроксимации заданной 
+										табличной функции с помощью линейного многочлена первой степени. 
+									</div>
+									<div class="">
+										<img src="static\images\misha.jpg" class="img">
+									</div>
+									
+								</div>
+						</div>
+						<div class="ImageParagraph-section">
+							<div class="content">
+								<div class="revtext">
+									<h3 class="revtitle">
+										Линейная регрессия
+									</h3>
+									<div class="revparagraph">
+										В этом разделе используется метод наименьших квадратов для аппроксимации заданной 
+										табличной функции с помощью линейного многочлена первой степени. 
+									</div>
+								</div>
+								<svg id="chart"></svg>
+							</div>
+						</div>
+						<div class="ImageParagraph-section">
+							<div class="content">
+								<canvas id="square"></canvas>
+								<div class="text">
+									<h3 class="title">
+										Квадратичная регрессия
+									</h3>
+									<div class="paragraph">
+										В данном разделе применяется метод наименьших квадратов для аппроксимации 
+										таблично заданной функции с помощью квадратичного многочлена второй степени.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+<div>
 
 
 <!-- <div class="container">

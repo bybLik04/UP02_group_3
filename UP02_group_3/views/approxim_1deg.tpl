@@ -9,12 +9,12 @@
 					<span>Графический конструктор</span>
 				</a>
 				<div class="separator"></div>
-				<a href="/approx1"> 
+				<a style="background:#bcc3c4"> 
 					<img src="static\images\linear.png" alt="линейная регрессия">
 					<span>Линейная регрессия</span>
 				</a>
 				<div class="separator"></div>
-				<a style="background:#bcc3c4"> 
+				<a href="/approx2"> 
 					<img src="static\images\square.png" alt="квадратичная регрессия">
 					<span>Квадратичная регрессия</span>
 				</a>

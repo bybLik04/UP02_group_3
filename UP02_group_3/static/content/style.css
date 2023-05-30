@@ -239,6 +239,7 @@ button {
 
 .page-layout > .m .c {
     display: flex;
+    max-width: 96%;
     align-items: flex-start;
 }
 

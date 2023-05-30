@@ -4,17 +4,17 @@
 	<div class="l">
 		<div class="mainnav">
 			<div class="calc-list">
-				<a> 
+				<a href="/plott"> 
 					<img src="static\images\graph.png" alt="графический конструктор">
 					<span>Графический конструктор</span>
 				</a>
 				<div class="separator"></div>
-				<a> 
+				<a href="/approx1"> 
 					<img src="static\images\linear.png" alt="линейная регрессия">
 					<span>Линейная регрессия</span>
 				</a>
 				<div class="separator"></div>
-				<a> 
+				<a href="/approx2"> 
 					<img src="static\images\square.png" alt="квадратичная регрессия">
 					<span>Квадратичная регрессия</span>
 				</a>
@@ -30,7 +30,7 @@
 							<div class="content">
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\var1.jpg" alt="Макс">
+										<img style="width:300px" src="static\images\var1.jpg" alt="Макс">
 									</picture>
 								</div>
 								<div class="text">
@@ -57,7 +57,7 @@
 								</div>
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\var2.jpg" alt="Макс">
+										<img style="width:300px" src="static\images\var2.jpg" alt="Макс">
 									</picture>
 								</div>
 							</div>
@@ -66,7 +66,7 @@
 							<div class="content">
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\var3.jpg" alt="Макс">
+										<img style="width:300px" src="static\images\var3.jpg" alt="Макс">
 									</picture>
 								</div>
 								<div class="text">

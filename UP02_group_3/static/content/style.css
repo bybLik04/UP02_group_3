@@ -334,7 +334,8 @@ button {
     width: 100px;
     font-family: Segoe UI;
     font-size: 16px;
-    color: inherit;
+    font-weight: 400;
+    color: #252525;
     padding: 7px;
     text-align: center;
     border: 1px solid #252525;
@@ -511,9 +512,4 @@ body[data-theme='dark'] {
 canvas {
     max-width: 300px;
     max-height: 300px;
-}
-
-svg {
-    width: 400px;
-    height: 400px;
 }

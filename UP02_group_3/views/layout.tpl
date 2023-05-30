@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -37,11 +40,7 @@
         
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/static/scripts/graph.js"</script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="/static/scripts/linear.js"</script>
-    <script src="/static/scripts/square.js"</script>
+    <script src="/static/scripts/plotting.js"</script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>

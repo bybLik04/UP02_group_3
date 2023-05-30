@@ -29,7 +29,6 @@
 						<div class="ImageParagraph-section">
 							<div class="content">
 								<canvas id="graph"></canvas>
-								
 								<div class="text">
 									<h3 class="title">
 										Графический конструктор
@@ -57,7 +56,7 @@
 										<a href="https://translated.turbopages.org/proxy_u/en-ru.ru.137d177e-647639eb-c95273fb-74722d776562/https/www.statology.org/quadratic-regression-r/">Подробнее.</a>
 									</div>
 								</div>
-								<svg id="chart"></svg>
+								<canvas id="linear"></canvas>
 							</div>
 						</div>
 						<div class="ImageParagraph-section">

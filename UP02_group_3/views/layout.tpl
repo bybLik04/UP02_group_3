@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Онлайн калькулятор</title>
+    <title>{{ title }} - Math Solver</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
@@ -19,6 +19,14 @@
                         <span class="headertext">Math Solver</span>
                     </a>
                 </div>
+                <div>
+                    <a href="/home" class="headerlink">
+                    <span>Главная</span>
+                </a>
+                <a href="/authors" class="headerlink">
+                    <span>Об авторах</span>
+                </a>
+                </div>
             </div>
         </div>
     </header>
@@ -28,7 +36,7 @@
         {{!base}}
         <hr />
         <footer>
-            <p>&copy; {{ year }} - Онлайн калькулятор</p>
+            <p>&copy; {{ year }} - Math Solver</p>
         </footer>
     </div>
 

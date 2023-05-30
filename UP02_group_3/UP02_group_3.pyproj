@@ -66,6 +66,9 @@
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\maksim.jpg" />
     <Content Include="static\images\misha.jpg" />
+    <Content Include="static\images\var1.jpg" />
+    <Content Include="static\images\var2.jpg" />
+    <Content Include="static\images\var3.jpg" />
     <Content Include="static\images\square.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />

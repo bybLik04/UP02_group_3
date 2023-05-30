@@ -30,7 +30,7 @@
 							<div class="content">
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\maksim.jpg" alt="Макс">
+										<img style="width:250px" src="static\images\var1.jpg" alt="Макс">
 									</picture>
 								</div>
 								<div class="text">
@@ -57,7 +57,7 @@
 								</div>
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\kirill.jpg" alt="Макс">
+										<img style="width:250px" src="static\images\var2.jpg" alt="Макс">
 									</picture>
 								</div>
 							</div>
@@ -66,7 +66,7 @@
 							<div class="content">
 								<div>
 									<picture class>
-										<img style="width:250px" src="static\images\misha.jpg" alt="Макс">
+										<img style="width:250px" src="static\images\var3.jpg" alt="Макс">
 									</picture>
 								</div>
 								<div class="text">

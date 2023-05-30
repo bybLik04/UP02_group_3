@@ -1,6 +1,8 @@
 % rebase('layout.tpl', title=title, year=year)
 
-<div class="container">
+
+
+<!-- <div class="container">
     <div class="my-color row">
         <div class="col-md-4">
             <h2>Михаил Назаров</h2>
@@ -28,3 +30,4 @@
         </div>
     </div>
 </div>
+-->

@@ -151,6 +151,9 @@ button {
     align-items: center;
     background: rgba(255,255,255,.75);
 }
+    .headerlogotext:hover {
+        text-decoration: none;
+    }
 .headerlogo {
     color: inherit;
     cursor: pointer;
@@ -168,7 +171,9 @@ button {
     margin-left: 8px;
     color: #000;
 }
-
+    .headertext:hover {
+        text-decoration: none;
+    }
 .headerlink {
     text-align: left;
     font-family: 'Segoe UI';
@@ -178,6 +183,9 @@ button {
     font-weight: 400;
     line-height: 20px;
 }
+    .headerlink:hover {
+        text-decoration: none;
+    }
 
 .page-header .phc .link:hover {
     text-decoration: underline;
@@ -280,6 +288,7 @@ button {
             }
 
             .ImageParagraph-section > .content .text .paragraph {
+                margin-bottom: 10px;
                 color: #252525;
                 font-family: Segoe UI;
                 font-size: 16px;
@@ -318,7 +327,27 @@ button {
                 line-height: 20px;
                 padding: 12px 0 0;
             }
+.calc-btn {
+    display: block;
+    height: 40px;
+    width: 100px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    color: inherit;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid #252525;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
+    .calc-btn:hover {
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid #eeeeee;
+        background-color: #eeeeee;
+    }
 .mainnav {
     border-radius: 10px;
     background: #fff;
@@ -335,18 +364,19 @@ button {
     line-height: 20px;
 }
     .calc-list > a {
+        color: inherit;
         border-radius: 5px;
         display: block;
         padding: 12px 16px;
-        display: -webkit-flex;
-        display: -moz-box;
         display: flex;
-        -webkit-align-items: center;
-        -moz-box-align: center;
         align-items: center;
+        cursor: pointer;
+        transition: 0.2s;
     }
     .calc-list a:hover {
+        color: inherit;
         background-color: #eeeeee;
+        text-decoration: none;
     }
         .calc-list a img {
             width: 24px;
@@ -359,13 +389,6 @@ button {
         height: 1px;
     }
 
-a {
-    color: inherit;
-    cursor: pointer;
-}
-    a:hover {
-        text-decoration: none;
-    }
 
 #mnav {
     z-index: 30;

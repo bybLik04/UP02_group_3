@@ -23,16 +23,17 @@
 								</div>
 								<div>
 									<picture class>
-										<img style="width:300px" src="static\images\kirill.jpg">
+										<img style="width:250px; height:400" src="static\images\kirill.jpg">
 									</picture>
 								</div>
+
 							</div>
 						</div>
 						<div class="ImageParagraph-section">
 							<div class="content">
 								<div>
 									<picture class>
-										<img style="width:300px" src="static\images\maksim.jpg">
+										<img style="width:250px; height:400" src="static\images\maksim.jpg">
 									</picture>
 								</div>
 								<div class="text">
@@ -66,7 +67,7 @@
 								</div>
 								<div>
 									<picture class>
-										<img style="width:300px" src="static\images\misha.jpg">
+										<img style="width:250px; height:400" src="static\images\misha.jpg">
 									</picture>
 								</div>
 							</div>
@@ -78,34 +79,17 @@
 	</div>
 <div>
 
+ <!-- Подключение библиотеки jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Скрипт анимации -->
+<script> 
+$(document).ready(function() { 
+  $('.content picture img').hide(); // Сначала скрываем картинку 
+  $('.content picture img').css({opacity: 0, marginTop: '20px'}); // Устанавливаем начальные стили
+
+  $('.content picture img').slideDown(1000).animate({ opacity: 1 }, 1000); // Применяем анимации для сдвига вниз и плавного появления
+}); 
+</script>
 
 
-<!-- <div class="container">
-    <div class="my-color row">
-        <div class="col-md-4">
-            <h2>Михаил Назаров</h2>
-            <p>
-                <a href="https://vk.com/aiwuio.oaiwu" target="_blank">
-                    <img src="static\images\misha.jpg" class="img-responsive" alt="Михаил" onclick="handleButtonClick('Михаил')">
-                </a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Кирилл Рыхлов</h2>
-            <p>
-                <a href="https://vk.com/id164639396" target="_blank">
-                    <img src="static\images\kirill.jpg" class="img-responsive" alt="Кирилл" onclick="handleButtonClick('Кирилл')">
-                </a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Максим Тугунов</h2>
-            <p>
-                <a href="https://vk.com/talentlessbot" target="_blank">
-                    <img src="static\images\maksim.jpg" class="img-responsive" alt="Максим" onclick="handleButtonClick('Максим')">
-                </a>
-            </p>
-        </div>
-    </div>
-</div>
--->

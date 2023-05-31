@@ -140,9 +140,6 @@ button {
     padding: 0 0 0 12px;
 }
 
-[dir="rtl"] .page-layout > .m {
-    padding: 0 12px 0 0;
-}
 
 .page-layout > .m .c {
     display: flex;
@@ -329,31 +326,7 @@ button {
     }
 
 
-#mnav {
-    z-index: 30;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
 
-    #mnav > div {
-        width: 70%;
-        height: 100%;
-        margin-left: -70%;
-    }
-
-[dir="rtl"] #mnav > div {
-    margin-right: -70%;
-    margin-left: 0;
-}
-
-@media screen and (max-width: 1030px) {
-    .page-layout > .m .c {
-        flex-direction: column;
-        align-items: unset;
-    }
 
     .page-layout > .m .c1 {
         margin: 12px 0 0 0;
@@ -465,7 +438,11 @@ footer {
     background: #F0F6F6;
     flex: 1 0 auto;
 }
-
+.next1 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
 #next {
     display: flex;
     flex-direction: column;
@@ -560,6 +537,45 @@ footer {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
+#hiddenTextContainer2 {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+#hiddenText2 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#toggleButton2 {
+    height: 40px;
+    width: 100px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: 400;
+    color: #252525;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #252525;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+    #toggleButton2:hover {
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid #eeeeee;
+        background-color: #eeeeee;
+    }
+
+    #toggleButton2:focus {
+        outline: none;
+    }
 
 .div-btns {
     display: flex;

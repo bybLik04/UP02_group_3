@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="next">
-        <div style="display:flex;flex-direction:column;height:100vh">
+        <div class="next1">
             <header>
                 <div class="page-header">
                     <div class="phc">
@@ -52,9 +52,12 @@
         </div>
     </div>
     
-    <script src="/static/scripts/plotting.js"</script>
-    <script src="/static/scripts/reading.js"</script>
-    <script src="/static/scripts/imganim.js"</script>
+    <script src="/static/scripts/plotting.js"></script>
+    <script src="/static/scripts/reading.js"></script>
+    <script src="/static/scripts/reading2.js"></script>
+    <script src="/static/scripts/imganim.js"></script>
+    <script src="/static/scripts/hidetxt.js"></script>
+    <script src="/static/scripts/hidetxt2.js"></script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>

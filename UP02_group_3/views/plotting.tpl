@@ -4,7 +4,7 @@
 	<div class="l">
 		<div class="mainnav">
 			<div class="calc-list">
-				<a style="background: #d7d7d7"> 
+				<a class="nav-back"> 
 					<img src="static\images\graph.png" alt="графический конструктор">
 					<span>Графический конструктор</span>
 				</a>

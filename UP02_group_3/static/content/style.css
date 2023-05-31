@@ -596,3 +596,7 @@ footer {
     margin-right: 75px;
     justify-content: space-between
 }
+
+.nav-back {
+    background-color: #d7d7d7
+}

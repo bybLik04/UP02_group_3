@@ -9,7 +9,7 @@
 					<span>Графический конструктор</span>
 				</a>
 				<div class="separator"></div>
-				<a style="background:#d7d7d7"> 
+				<a class="nav-back"> 
 					<img src="static\images\linear.png" alt="линейная регрессия">
 					<span>Линейная регрессия</span>
 				</a>

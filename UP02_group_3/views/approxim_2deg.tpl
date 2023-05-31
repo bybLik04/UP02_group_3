@@ -30,22 +30,28 @@
 							<div class="content">
 								<canvas id="graph"></canvas>
 								<div class="text">
+									<button id="toggleButton">Теория</button>
 									<form action="/approx2" method="post">
 										<div class="approx">
 											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел" required>
 											<input class="input1" name="Y" placeholder="Значение Y, через пробел" required>
 										</div>
-										<div>
+										<div class="div-btns">
 											<input type="submit" class="calc-btn" value="Решить">
+											<input type="submit" class="revcalc-btn" value="Пример">
 										</div>
 									</form>
+									
 								</div>
 							</div>
 						</div>
 						<div class="ImageParagraph-section">
-							<div>
-								<label class="solve-text">Решение:</label>
+							<div class="solve-text">
+								<label class="s">Решение:</label>
 								<label class="solve"></label>
+								<div id="hiddenTextContainer">
+									<div id="hiddenText"></div>
+								</div>
 							</div>
 						</div>
 					</div>

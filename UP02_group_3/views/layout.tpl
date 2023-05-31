@@ -51,16 +51,10 @@
             </footer>
         </div>
     </div>
-
-    <script> 
-        $(document).ready(function() { 
-          $('.content picture img').hide(); // Сначала скрываем картинку 
-          $('.content picture img').css({opacity: 0, marginTop: '20px'}); // Устанавливаем начальные стили
-
-          $('.content picture img').slideDown(1000).animate({ opacity: 1 }, 1000); // Применяем анимации для сдвига вниз и плавного появления
-        }); 
-    </script>
+    
     <script src="/static/scripts/plotting.js"</script>
+    <script src="/static/scripts/reading.js"</script>
+    <script src="/static/scripts/imganim.js"</script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>

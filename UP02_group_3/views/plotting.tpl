@@ -30,7 +30,7 @@
                         <div class="content">
                             <canvas id="graph"></canvas>
                             <div class="text">
-                                <form action="/approx1" method="post">
+                                <form action="/plott" method="post">
                                     <div class="approx">
                                         <select class="select1" id="function" name="function">
                                             <option value="linear">Линейная  y = kx+b</option>

@@ -38,6 +38,7 @@ def authors():
     return dict(
         title='Построение графиков',
         message='Построение графиков',
+        image_data="static\images\var1.jpg",
         year=datetime.now().year
     )
 

@@ -28,16 +28,16 @@
 					<div class="mainpage">
 						<div class="ImageParagraph-section">
 							<div class="content">
-								<canvas id="graph"></canvas>
+								<img id="result-image" src="{{image_data}}" alt="Результат графика">
 								<div class="text">
 								<button id="toggleButton2">Теория</button>
 									<form action="/approx1" method="post">
 										<div class="approx">
-											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел" required>
-											<input class="input1" name="Y" placeholder="Значение Y, через пробел" required>
+											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел(пример '-')">
+											<input class="input1" name="Y" placeholder="Значение Y, через пробел(пример '-')">
 										</div>
 										<div class="div-btns">
-											<input type="submit" class="calc-btn" value="Решить">
+											<input type="submit" class="calc-btn" name='deg1_btn' value="Решить">
 											<input type="submit" class="revcalc-btn" value="Пример">
 										</div>
 									</form>
@@ -47,7 +47,7 @@
 						<div class="ImageParagraph-section">
 							<div class="solve-text">
 								<label class="s">Решение:</label>
-								<label class="solve">k = {{k}}, b = {{b}}</label>
+								<label class="solve">{{ex}}k = {{k}}, b = {{b}}, r2 = {{r}}</label>
 								<div id="hiddenTextContainer2">
 									<div id="hiddenText2"></div>
 								</div>

@@ -49,6 +49,9 @@ def authors():
         title='Аппроксимация 1-й ст',
         k = 0,
         b = 0,
+        r = 0,
+        ex = '',
         message='Аппроксимация 1-й ст',
+        image_data='static\images\graph_strt.png',
         year=datetime.now().year
     )

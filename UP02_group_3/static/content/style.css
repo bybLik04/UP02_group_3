@@ -384,12 +384,7 @@ button {
 }
 
 canvas {
-    width: 400px;
-    height: 300px;
-}
-
-canvas img {
-    max-width: 300px; 
+    max-width: 300px;
     max-height: 300px;
 }
 
@@ -602,9 +597,9 @@ footer {
 .div-btns {
     display: flex;
     margin-right: 75px;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .nav-back {
-    background-color: #d7d7d7
+    background-color: #d7d7d7;
 }

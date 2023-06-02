@@ -62,7 +62,7 @@
       img.onload = function() {
         ctx.drawImage(img, 0, 0, 300, 300);
       };
-      img.src = '/static/images/graph.png';
+      img.src = '/static/images/graph5.png';
     </script>
     <script src="/static/scripts/reading.js"></script>
     <script src="/static/scripts/reading2.js"></script>

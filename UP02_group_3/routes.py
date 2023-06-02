@@ -2,6 +2,7 @@
 Routes and views for the bottle application.
 """
 
+from email import message
 from bottle import route, view
 from datetime import datetime
 
@@ -37,7 +38,7 @@ def authors():
 def authors():
     return dict(
         title='Построение графиков',
-        message='Построение графиков',
+        message='',
         image_data="static\images\graph0.png",
         year=datetime.now().year
     )

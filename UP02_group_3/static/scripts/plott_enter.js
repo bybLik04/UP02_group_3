@@ -18,6 +18,11 @@ function showElement(element) {
     element.style.display = "block";
 }
 
+// Функция для очистки значений полей
+function clearInputValue(element) {
+    element.value = "";
+}
+
 // Функция для скрытия полей при загрузке страницы
 function hideAllFields() {
     hideElement(kInput);
@@ -66,16 +71,64 @@ selectElement.addEventListener("change", function () {
         hideElement(xInput);
         hideElement(startInput);
         hideElement(endInput);
+        hideElement(calc);
     }
+
+    // Очищаем значения полей
+  clearInputValue(kInput);
+  clearInputValue(aInput);
+  clearInputValue(bInput);
+  clearInputValue(cInput);
+  clearInputValue(xInput);
+  clearInputValue(startInput);
+  clearInputValue(endInput);
 });
 
 // Скрытие полей при загрузке страницы
 hideAllFields();
 
-function handleFormSubmit(event) {
-    // Проверяем выбранную функцию и скрываем ненужные поля
-    // ...
+const lastSelectedFunction = localStorage.getItem("lastSelectedFunction");
+if (lastSelectedFunction) {
+    selectElement.value = lastSelectedFunction;
+    // Показываем все поля
+    showElement(kInput);
+    showElement(aInput);
+    showElement(bInput);
+    showElement(cInput);
+    showElement(xInput);
+    showElement(startInput);
+    showElement(endInput);
+    showElement(calc);
 
+    // Скрываем ненужные поля в зависимости от выбранной функции
+    if (lastSelectedFunction === "linear") {
+        hideElement(aInput);
+        hideElement(xInput);
+        hideElement(cInput);
+    } else if (lastSelectedFunction === "quadratic") {
+        hideElement(kInput);
+        hideElement(xInput);
+    } else if (lastSelectedFunction === "power") {
+        hideElement(kInput);
+        hideElement(xInput);
+        hideElement(bInput);
+        hideElement(cInput);
+    } else if (lastSelectedFunction === "selection") {
+        hideElement(kInput);
+        hideElement(aInput);
+        hideElement(bInput);
+        hideElement(cInput);
+        hideElement(xInput);
+        hideElement(startInput);
+        hideElement(endInput);
+        hideElement(calc);
+    }
+
+}
+
+function handleFormSubmit(event) {
+    const selectedFunction = selectElement.value;
+    localStorage.setItem("lastSelectedFunction", selectedFunction);
     // Отправляем форму
     document.getElementById("myForm").submit();
 

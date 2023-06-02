@@ -1,3 +1,4 @@
+
 from email import message
 from hmac import digest
 import bottle
@@ -27,26 +28,27 @@ def handle_plot_request():
     ax = fig.add_subplot(111)
     err_msg = "Ошибка: введите число!"
 
-    if start_length == digest and start_length != "":
+    if start_length.isdigit() and start_length != "":
         sl = float(start_length)
     else:
-        return template('plotting.tpl',message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
+        return template('plotting.tpl',message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
     
-    if end_length == digest and end_length != "":
+    if end_length.isdigit() and end_length != "":
         el = float(end_length)
     else:
-        return template('plotting.tpl',message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
+        return template('plotting.tpl',message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
     
     
     if function == 'linear':
-        if k_coefficient == digest and k_coefficient != "":
+        if k_coefficient.isdigit() and k_coefficient != "":
             k = float(k_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
-        if b_coefficient == digest and b_coefficient != "":
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
+
+        if b_coefficient.isdigit() and b_coefficient != "":
             b = float(b_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
 
         x = np.linspace(sl, el, 100)
         y = k * x + b
@@ -57,18 +59,20 @@ def handle_plot_request():
         ax.grid(True)
 
     elif function == 'quadratic':
-        if a_coefficient == digest and a_coefficient != "":
+        if a_coefficient.isdigit() and a_coefficient != "":
             a = float(a_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
-        if b_coefficient == digest and b_coefficient != "":
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
+
+        if b_coefficient.isdigit() and b_coefficient != "":
             b = float(b_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
-        if c_coefficient == digest and c_coefficient != "":
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
+
+        if c_coefficient.isdigit() and c_coefficient != "":
             c = float(c_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
 
         x = np.linspace(sl, el, 100)
         y = a * x**2 + b * x + c
@@ -79,10 +83,10 @@ def handle_plot_request():
         ax.grid(True)
 
     elif function == 'power':
-        if a_coefficient == digest and a_coefficient != "":
+        if a_coefficient.isdigit() and a_coefficient != "":
             a = float(a_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)
+            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
 
         x = np.linspace(sl, el, 100)
         y = x**a

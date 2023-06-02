@@ -28,7 +28,9 @@
 					<div class="mainpage">
 						<div class="ImageParagraph-section">
 							<div class="content">
-								<img id="result-image" src="{{image_data}}" alt="Результат графика">
+								<div>
+									<img id="result-image" src="{{image_data}}" alt="Результат графика">
+								</div>
 								<div class="text">
 								<button id="toggleButton2">Теория</button>
 									<form action="/approx1" method="post">

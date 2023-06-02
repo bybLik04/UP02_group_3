@@ -20,7 +20,6 @@ def home():
 def authors():
     return dict(
         title='Об авторах',
-        message='Об авторах',
         year=datetime.now().year
     )
 
@@ -28,8 +27,8 @@ def authors():
 @view('approxim_2deg')
 def authors():
     return dict(
+        image_data='static\images\graph_strt.png',
         title='Аппроксимация 2-й ст',
-        message='Аппроксимация 2-й ст',
         year=datetime.now().year
     )
 
@@ -52,7 +51,6 @@ def authors():
         b = 0,
         r = 0,
         ex = '',
-        message='Аппроксимация 1-й ст',
         image_data='static\images\graph_strt.png',
         year=datetime.now().year
     )

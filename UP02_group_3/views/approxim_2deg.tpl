@@ -28,7 +28,7 @@
 					<div class="mainpage">
 						<div class="ImageParagraph-section">
 							<div class="content">
-								<canvas id="graph"></canvas>
+								<img id="result-image" src="{{image_data}}" alt="Результат графика">
 								<div class="text">
 									<button id="toggleButton">Теория</button>
 									<form action="/approx2" method="post">

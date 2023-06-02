@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>UP02_group_3</Name>
     <RootNamespace>UP02_group_3</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -64,15 +64,13 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\images\graph.png" />
+    <Content Include="static\images\graph0.png" />
     <Content Include="static\images\kirill.jpg" />
     <Content Include="static\images\square.png" />
     <Content Include="static\images\logo2.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\maksim.jpg" />
     <Content Include="static\images\misha.jpg" />
-    <Content Include="static\images\var1.jpg" />
-    <Content Include="static\images\var2.jpg" />
-    <Content Include="static\images\var3.jpg" />
     <Content Include="static\images\linear.png" />
     <Content Include="static\scripts\aprox1.txt" />
     <Content Include="static\scripts\aprox2.txt" />
@@ -93,6 +91,7 @@
     <Content Include="static\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="static\scripts\plotting.js" />
     <Content Include="static\scripts\modernizr-2.6.2.js" />
+    <Content Include="static\scripts\plott_enter.js" />
     <Content Include="static\scripts\reading.js" />
     <Content Include="static\scripts\reading2.js" />
     <Content Include="static\scripts\respond.js" />
@@ -109,6 +108,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
+      <Version>3.11</Version>
+      <Description>env1 (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.9</Version>

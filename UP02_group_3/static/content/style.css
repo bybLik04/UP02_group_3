@@ -179,6 +179,10 @@ button {
         align-items: center;
         flex-direction: row-reverse;
     }
+        .ImageParagraph-section img{
+            height: 350px;
+            width: 400px;
+        }
         .ImageParagraph-section > .content .text {
             flex-grow: 1;
             margin: 0 auto;

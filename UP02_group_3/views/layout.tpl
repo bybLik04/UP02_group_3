@@ -52,6 +52,8 @@
         </div>
     </div>
     
+    <script src="/static/scripts/plott_enter.js"></script>
+    <script src="/static/scripts/plotting.js"></script>
 
     <script>
       var canvas = document.getElementById('graph');

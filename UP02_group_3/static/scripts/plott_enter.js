@@ -55,14 +55,17 @@ selectElement.addEventListener("change", function () {
         hideElement(aInput);
         hideElement(xInput);
         hideElement(cInput);
+        hideElement(ERROR);
     } else if (selectedFunction === "quadratic") {
         hideElement(kInput);
         hideElement(xInput);
+        hideElement(ERROR);
     } else if (selectedFunction === "power") {
         hideElement(kInput);
         hideElement(xInput);
         hideElement(bInput);
         hideElement(cInput);
+        hideElement(ERROR);
     } else if (selectedFunction === "selection") {
         hideElement(kInput);
         hideElement(aInput);
@@ -72,6 +75,7 @@ selectElement.addEventListener("change", function () {
         hideElement(startInput);
         hideElement(endInput);
         hideElement(calc);
+        hideElement(ERROR);
     }
 
     // Очищаем значения полей
@@ -99,6 +103,7 @@ if (lastSelectedFunction) {
     showElement(startInput);
     showElement(endInput);
     showElement(calc);
+    showElement(ERROR);
 
     // Скрываем ненужные поля в зависимости от выбранной функции
     if (lastSelectedFunction === "linear") {

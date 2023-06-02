@@ -64,15 +64,13 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\images\graph.png" />
+    <Content Include="static\images\graph0.png" />
     <Content Include="static\images\kirill.jpg" />
     <Content Include="static\images\square.png" />
     <Content Include="static\images\logo2.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\maksim.jpg" />
     <Content Include="static\images\misha.jpg" />
-    <Content Include="static\images\var1.jpg" />
-    <Content Include="static\images\var2.jpg" />
-    <Content Include="static\images\var3.jpg" />
     <Content Include="static\images\linear.png" />
     <Content Include="static\scripts\aprox1.txt" />
     <Content Include="static\scripts\aprox2.txt" />
@@ -93,6 +91,7 @@
     <Content Include="static\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="static\scripts\plotting.js" />
     <Content Include="static\scripts\modernizr-2.6.2.js" />
+    <Content Include="static\scripts\plott_enter.js" />
     <Content Include="static\scripts\reading.js" />
     <Content Include="static\scripts\reading2.js" />
     <Content Include="static\scripts\respond.js" />

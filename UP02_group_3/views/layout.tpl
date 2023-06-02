@@ -52,6 +52,7 @@
         </div>
     </div>
     
+    <script src="/static/scripts/plott_enter.js"></script>
     <script src="/static/scripts/plotting.js"></script>
     <script src="/static/scripts/reading.js"></script>
     <script src="/static/scripts/reading2.js"></script>

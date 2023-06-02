@@ -30,14 +30,14 @@
 							<div class="content">
 								<img id="result-image" src="{{image_data}}" alt="Результат графика">
 								<div class="text">
-									<form action="/plott" method="post">
+									<form action="/plott" method="post" id="myForm">
 										<div class="approx">
 											<select class="select1" id="function" name="function">
+												<option value="selection">Выберите функцию: </option>
 												<option value="linear">Линейная  y = kx+b</option>
 												<option value="quadratic">Квадратичная  y = ax^2+bx+c</option>
 												<option value="power">Степенная  y = x^a</option>
 											</select>
-											<label class="label-text">Если в вашей функции не используется какой-то из коэффициентов, то поставьте знак "-"</label>
 											<input class="input1" id="k_coefficient" name="k_coefficient" placeholder="Значение k" required>
 											<input class="input1" id="a_coefficient" name="a_coefficient" placeholder="Значение a" required>
 											<input class="input1" id="b_coefficient" name="b_coefficient" placeholder="Значение b" required>
@@ -47,7 +47,7 @@
 											<input class="input1" id="end_length" name="end_length" placeholder="Конец отрезка" required>
 										</div>
 										<div class="div-btns">
-											<input type="submit" class="calc-btn" value="Решить">
+											<input id="calc"type="submit" class="calc-btn" onclick="handleFormSubmit(event)" value="Решить">
 										</div>
 									</form>
 								</div>

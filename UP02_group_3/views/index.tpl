@@ -75,7 +75,7 @@
 										<a href="https://studfile.net/preview/8891630/page:15/">Подробнее.</a>
 									</div>
 									<div>
-										<a type="submit" class="calc-btn">Решить</a>
+										<a href="/approx2" class="calc-btn">Решить</a>
 									</div>
 								</div>
 							</div>

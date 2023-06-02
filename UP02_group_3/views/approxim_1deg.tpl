@@ -47,7 +47,7 @@
 						<div class="ImageParagraph-section">
 							<div class="solve-text">
 								<label class="s">Решение:</label>
-								<label class="solve"></label>
+								<label class="solve">k = {{k}}, b = {{b}}</label>
 								<div id="hiddenTextContainer2">
 									<div id="hiddenText2"></div>
 								</div>

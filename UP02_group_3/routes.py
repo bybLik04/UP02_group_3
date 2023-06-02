@@ -46,6 +46,8 @@ def authors():
 def authors():
     return dict(
         title='Аппроксимация 1-й ст',
+        k = 0,
+        b = 0,
         message='Аппроксимация 1-й ст',
         year=datetime.now().year
     )

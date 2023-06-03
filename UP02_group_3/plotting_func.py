@@ -1,5 +1,3 @@
-from email import message
-from hmac import digest
 import bottle
 import matplotlib
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
@@ -13,6 +11,7 @@ matplotlib.use('Agg')
 
 @post('/plott', method='POST')
 def handle_plot_request():
+    # получаем коэффициенты с полей ввода и заносим в переменные
     function = bottle.request.forms.get('function')
     k_coefficient = bottle.request.forms.get('k_coefficient')
     a_coefficient = bottle.request.forms.get('a_coefficient')
@@ -22,12 +21,12 @@ def handle_plot_request():
     start_length = bottle.request.forms.get('start_length')
     end_length = bottle.request.forms.get('end_length')
 
-    fig = Figure()
+    fig = Figure() # создание новой фигуры
     canvas = FigureCanvas(fig)
-    ax = fig.add_subplot(111)
+    ax = fig.add_subplot(111) # новая область рисования
     err_msg = "Ошибка: введите число!"
 
-    if start_length.isdigit() and start_length != "":
+    if start_length.isdigit() and start_length != "": # проверка на пустоту и числа
         sl = float(start_length)
     else:
         return template('plotting.tpl',message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
@@ -38,7 +37,7 @@ def handle_plot_request():
         return template('plotting.tpl',message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
     
     
-    if function == 'linear':
+    if function == 'linear': # при нажатии кнопки решить выбрана линейная функция
         if k_coefficient.isdigit() and k_coefficient != "":
             k = float(k_coefficient)
         else:
@@ -55,9 +54,9 @@ def handle_plot_request():
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_title('Линейная функция: y = {}x + {}'.format(k, b))
-        ax.grid(True)
+        ax.grid(True) # сетка на графике
 
-    elif function == 'quadratic':
+    elif function == 'quadratic': # при нажатии кнопки решить выбрана квадратичная функция
         if a_coefficient.isdigit() and a_coefficient != "":
             a = float(a_coefficient)
         else:
@@ -81,7 +80,7 @@ def handle_plot_request():
         ax.set_title('Квадратичная функция: y = {}x^2 + {}x + {}'.format(a, b, c))
         ax.grid(True)
 
-    elif function == 'power':
+    elif function == 'power': # при нажатии кнопки решить выбрана степенная функция
         if a_coefficient.isdigit() and a_coefficient != "":
             a = float(a_coefficient)
         else:
@@ -95,9 +94,9 @@ def handle_plot_request():
         ax.set_title('Степенная функция: y = x^{}'.format(a))
         ax.grid(True)
 
-    canvas.draw()
-    image = canvas.tostring_rgb().decode('latin-1')
-    image_path = os.path.join("static/images", "graph1.png")
-    canvas.print_png(image_path)
+    canvas.draw() # строим график
+    image_path = os.path.join("static/images", "graph1.png") # путь
+    canvas.print_png(image_path) # сохранение картинки
 
+    # если нет ошибок
     return template('plotting.tpl', message="", image_data="static\images\graph1.png", title='Построение графиков', year=datetime.now().year)

@@ -55,11 +55,10 @@ def approx2():
             ax.legend()
             ax.grid(True)
             plt.show()
-
             plt.savefig('static/images/square1.png', dpi=300, bbox_inches='tight') #сохранение построенного графика
-            msg='Коэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(k.round(), b.round(), c.round(), r2.round())
-            #msg='Коэффициенты квадратичной линии регрессии: {} \nКоэффициент детерминированности R2={}'.format(coefficients.round(), r2.round())
 
+            msg='Коэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(toFixed(k), toFixed(b), toFixed(c), toFixed(r2))
+            
             # Возвращает темплейт
             if trigg != True:
                 return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\graph_strt.png', message=err_msg)
@@ -102,6 +101,10 @@ def approx2():
 
         plt.savefig('static/images/square2.png', dpi=300, bbox_inches='tight') #сохранение построенного графика
 
-        msg='X = {}; Y = {} \nКоэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(x.round(), y.round(), k.round(), b.round(), c.round(), r2.round())
+        msg='X = {}; Y = {} \nКоэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(x.round(), y.round(), toFixed(k), toFixed(b), toFixed(c), toFixed(r2))
         # Возвращает темплейт
         return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\square2.png', message=msg)
+
+def toFixed(numObj):
+    digits=3
+    return f"{numObj:.{digits}f}"

@@ -12,8 +12,21 @@ def approx2():
             err_msg='Ошибка входных данных!'
 
             # Получение коэффициентов из формы
-            x = np.array(request.forms.get('X').split(), dtype=float)
-            y = np.array(request.forms.get('Y').split(), dtype=float)
+            x_arr = np.array(request.forms.get('X').split(), dtype=float)
+            y_arr = np.array(request.forms.get('Y').split(), dtype=float)
+
+            # Объединение массивов x и y в список пар
+            combined = list(zip(x_arr, y_arr))
+
+            # Сортировка списка пар по возрастанию значений x
+            combined.sort(key=lambda pair: pair[0])
+
+            # Разделение пар обратно на массивы x и y
+            x_sorted, y_sorted = zip(*combined)
+
+            # Преобразование обратно в массивы NumPy
+            x = np.array(x_sorted)
+            y = np.array(y_sorted)
 
             #проверка на то, чтобы график не был одной точкой
             trigg = False
@@ -29,9 +42,9 @@ def approx2():
                     trigg = False
 
             # Основные вычисления
-            A = np.vstack([x**2, x, np.ones(len(x))]).T #создание матрицы
+            A = np.vstack([x**2, x, np.ones(len(x))]).T #аппроксимация данных методом наименьших квадратов
             k, b, c = np.linalg.lstsq(A, y, rcond=None)[0] #получение коэффициентов квадратичной линии регрессии
-            y_pred = k*x**2 + b*x + c #аппроксимация данных методом наименьших квадратов
+            y_pred = k*x**2 + b*x + c 
             r2 = r2_score(y, y_pred)  #вычисление коэффициента детерминации
 
             # построение графика
@@ -54,10 +67,21 @@ def approx2():
         except:
             return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\graph_strt.png', message=err_msg)
     else:
-        num_elements = 5  # Заданное количество элементов
-        x = np.array([1.0, 2.0, 3.0, 4.0, 5.0], dtype=float)
-        y = np.array([random.uniform(0.0, 100.0) for _ in range(num_elements)], dtype=float) 
+        num_elements = 10  # Заданное количество элементов
+        x_arr = np.array([random.uniform(0.0, 100.0) for _ in range(num_elements)], dtype=float)
+        y_arr = np.array([random.uniform(0.0, 100.0) for _ in range(num_elements)], dtype=float) 
+        # Объединение массивов x и y в список пар
+        combined = list(zip(x_arr, y_arr))
 
+        # Сортировка списка пар по возрастанию значений x
+        combined.sort(key=lambda pair: pair[0])
+
+        # Разделение пар обратно на массивы x и y
+        x_sorted, y_sorted = zip(*combined)
+
+        # Преобразование обратно в массивы NumPy
+        x = np.array(x_sorted)
+        y = np.array(y_sorted)
         # Основные вычисления
         A = np.vstack([x**2, x, np.ones(len(x))]).T
         k, b, c = np.linalg.lstsq(A, y, rcond=None)[0]
@@ -75,6 +99,6 @@ def approx2():
 
         plt.savefig('static/images/square2.png', dpi=300, bbox_inches='tight') #сохранение построенного графика
 
-        msg='X = {}; Y = {} \nКоэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(x, y.round(), k.round(), b.round(), c.round(), r2.round())
+        msg='X = {}; Y = {} \nКоэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(x.round(), y.round(), k.round(), b.round(), c.round(), r2.round())
         # Возвращает темплейт
         return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\square2.png', message=msg)

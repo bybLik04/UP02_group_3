@@ -1,7 +1,6 @@
 import random
-from bottle import route, run, request, template, post
+from bottle import request, template, post
 import numpy as np
-from datetime import datetime
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
@@ -41,23 +40,25 @@ def approx2():
                 else:
                     trigg = False
 
-            # Основные вычисления
-            A = np.vstack([x**2, x, np.ones(len(x))]).T #аппроксимация данных методом наименьших квадратов
-            k, b, c = np.linalg.lstsq(A, y, rcond=None)[0] #получение коэффициентов квадратичной линии регрессии
-            y_pred = k*x**2 + b*x + c 
-            r2 = r2_score(y, y_pred)  #вычисление коэффициента детерминации
+            # Аппроксимация методом наименьших квадратов
+            A = np.vstack([x**2, x, np.ones(len(x))]).T
+            k, b, c = np.linalg.lstsq(A, y, rcond=None)[0]
+            y_pred = k*x**2 + b*x + c
+            r2 = r2_score(y, y_pred) #вычисление коэффициента детерминации
 
-            # построение графика
+            # Построение графика
             fig, ax = plt.subplots(figsize=(5, 5))
             ax.plot(x, y, 'o', label='Исходные данные', markersize=5)
-            ax.plot(x, k * x**2 + b * x, 'r', label='Приближенная линия')
+            ax.plot(x, k * x**2 + b * x + c, 'r', label='Приближенная линия')
             ax.set_xlabel('x')
             ax.set_ylabel('y')
             ax.legend()
             ax.grid(True)
+            plt.show()
 
             plt.savefig('static/images/square1.png', dpi=300, bbox_inches='tight') #сохранение построенного графика
             msg='Коэффициенты квадратичной линии регрессии: a0={}, a1={} a2={} \nКоэффициент детерминированности R2={}'.format(k.round(), b.round(), c.round(), r2.round())
+            #msg='Коэффициенты квадратичной линии регрессии: {} \nКоэффициент детерминированности R2={}'.format(coefficients.round(), r2.round())
 
             # Возвращает темплейт
             if trigg != True:
@@ -82,20 +83,22 @@ def approx2():
         # Преобразование обратно в массивы NumPy
         x = np.array(x_sorted)
         y = np.array(y_sorted)
-        # Основные вычисления
+
+        # Аппроксимация методом наименьших квадратов
         A = np.vstack([x**2, x, np.ones(len(x))]).T
         k, b, c = np.linalg.lstsq(A, y, rcond=None)[0]
         y_pred = k*x**2 + b*x + c
-        r2 = r2_score(y, y_pred) 
+        r2 = r2_score(y, y_pred)
 
-        # построение графика
+        # Построение графика
         fig, ax = plt.subplots(figsize=(5, 5))
         ax.plot(x, y, 'o', label='Исходные данные', markersize=5)
-        ax.plot(x, k * x**2 + b * x, 'r', label='Приближенная линия')
+        ax.plot(x, k * x**2 + b * x + c, 'r', label='Приближенная линия')
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.legend()
         ax.grid(True)
+        plt.show()
 
         plt.savefig('static/images/square2.png', dpi=300, bbox_inches='tight') #сохранение построенного графика
 

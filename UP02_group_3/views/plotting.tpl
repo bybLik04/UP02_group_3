@@ -48,7 +48,7 @@
 										</div>
 										<div class="div-btns">
 											<input id="calc"type="submit" class="calc-btn" onclick="handleFormSubmit(event)" value="Решить">
-											<label id="ERROR">{{message}}</label>
+											<label id="ERROR" style="padding-left: 30px;">{{message}}</label>
 										</div>
 									</form>
 								</div>

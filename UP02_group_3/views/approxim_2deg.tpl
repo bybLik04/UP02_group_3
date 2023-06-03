@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, year=year)
+% rebase('layout.tpl', title=title)
 
 <div class="page-layout">
 	<div class="l">
@@ -33,22 +33,21 @@
 									<button id="toggleButton">Теория</button>
 									<form action="/approx2" method="post">
 										<div class="approx">
-											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел" required>
-											<input class="input1" name="Y" placeholder="Значение Y, через пробел" required>
+											<input class="input1" id="fname" name="X" placeholder="Значение X, через пробел">
+											<input class="input1" name="Y" placeholder="Значение Y, через пробел">
 										</div>
 										<div class="div-btns">
-											<input type="submit" class="calc-btn" value="Решить">
+											<input type="submit" class="calc-btn" name='dg2_btn' value="Решить">
 											<input type="submit" class="revcalc-btn" value="Пример">
 										</div>
 									</form>
-									
 								</div>
 							</div>
 						</div>
 						<div class="ImageParagraph-section">
 							<div class="solve-text">
 								<label class="s">Решение:</label>
-								<label class="solve"></label>
+								<label class="solve">{{message}}</label>
 								<div id="hiddenTextContainer">
 									<div id="hiddenText"></div>
 								</div>

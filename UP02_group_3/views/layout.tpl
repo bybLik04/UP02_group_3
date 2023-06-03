@@ -54,16 +54,6 @@
     
     <script src="/static/scripts/plott_enter.js"></script>
     <script src="/static/scripts/plotting.js"></script>
-
-    <script>
-      var canvas = document.getElementById('graph');
-      var ctx = canvas.getContext('2d');
-      var img = new Image();
-      img.onload = function() {
-        ctx.drawImage(img, 0, 0, 300, 300);
-      };
-      img.src = '/static/images/graph5.png';
-    </script>
     <script src="/static/scripts/reading.js"></script>
     <script src="/static/scripts/reading2.js"></script>
     <script src="/static/scripts/imganim.js"></script>

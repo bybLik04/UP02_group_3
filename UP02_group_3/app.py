@@ -9,6 +9,7 @@ import sys
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
 import approx_1dg
+import approx_2dg
 import plotting_func
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:

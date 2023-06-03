@@ -27,9 +27,9 @@ def authors():
 @view('approxim_2deg')
 def authors():
     return dict(
+        message='',
         image_data='static\images\graph_strt.png',
-        title='Аппроксимация 2-й ст',
-        year=datetime.now().year
+        title='Аппроксимация 2-й ст.'
     )
 
 @route('/plott')
@@ -46,7 +46,7 @@ def authors():
 @view('approxim_1deg')
 def authors():
     return dict(
-        title='Аппроксимация 1-й ст',
+        title='Аппроксимация 1-й ст.',
         k = 0,
         b = 0,
         r = 0,

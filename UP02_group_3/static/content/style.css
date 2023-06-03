@@ -484,6 +484,7 @@ footer {
     font-family: Segoe UI;
     font-size: 18px;
     font-weight: 500;
+    white-space: pre-line;
 }
 
 .solve-text {
@@ -595,7 +596,6 @@ footer {
 
 .div-btns {
     display: flex;
-    margin-right: 75px;
     justify-content: space-between;
 }
 

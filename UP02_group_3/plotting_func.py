@@ -1,3 +1,4 @@
+import plotting_func
 import bottle
 import matplotlib
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
@@ -57,10 +58,10 @@ def handle_plot_request():
         ax.grid(True) # сетка на графике
 
     elif function == 'quadratic': # при нажатии кнопки решить выбрана квадратичная функция
-        if a_coefficient.isdigit() and a_coefficient != "":
+        if a_coefficient.isdigit() and a_coefficient != "" and a_coefficient != '0':
             a = float(a_coefficient)
         else:
-            return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
+            return template('plotting.tpl', message="a не должно равняться 0", image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
 
         if b_coefficient.isdigit() and b_coefficient != "":
             b = float(b_coefficient)
@@ -81,11 +82,17 @@ def handle_plot_request():
         ax.grid(True)
 
     elif function == 'power': # при нажатии кнопки решить выбрана степенная функция
-        if a_coefficient.isdigit() and a_coefficient != "":
+        if '/' in a_coefficient:
+            numerator, denominator = a_coefficient.split('/')
+            if numerator.isdigit() and denominator.isdigit() and denominator != '0':
+                a = float(numerator) / float(denominator)
+            else:
+                return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
+        elif a_coefficient.isdigit() and a_coefficient != "":
             a = float(a_coefficient)
         else:
             return template('plotting.tpl', message=err_msg, image_data="static\images\graph0.png", title='Построение графиков', year=datetime.now().year)
-
+        
         x = np.linspace(sl, el, 100)
         y = x**a
         ax.plot(x, y)
@@ -93,6 +100,7 @@ def handle_plot_request():
         ax.set_ylabel('y')
         ax.set_title('Степенная функция: y = x^{}'.format(a))
         ax.grid(True)
+    
 
     canvas.draw() # строим график
     image_path = os.path.join("static/images", "graph1.png") # путь

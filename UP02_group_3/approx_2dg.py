@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
+title='Аппроксимация 2-й ст.'
+
 @post('/approx2', method='POST')
 def approx2():
     req = request.forms.get('dg2_btn')
@@ -50,11 +52,11 @@ def approx2():
 
         # Возвращает темплейт
         if trigg != True:
-            return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\graph_strt.png', message=err_msg)
+            return template('approxim_2deg.tpl', title=title, image_data='static\images\graph_strt.png', message=err_msg)
         else:
-            return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\square1.png', message=msg)
+            return template('approxim_2deg.tpl', title=title, image_data='static\images\square1.png', message=msg)
     except:
-        return template('approxim_2deg.tpl', title='Аппроксимация 2-й ст.', image_data='static\images\graph_strt.png', message=err_msg)
+        return template('approxim_2deg.tpl', title=title, image_data='static\images\graph_strt.png', message=err_msg)
 
 def toFixed(numObj):
     digits=3

@@ -10,8 +10,7 @@ import sys
 import routes
 import approx_1dg
 import approx_2dg
-import plotting_func
-
+import
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.
     # It must be set at the beginning of the script.

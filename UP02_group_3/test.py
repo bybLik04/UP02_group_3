@@ -1,5 +1,4 @@
 import unittest
-
 from unittest import mock
 from bottle import FormsDict
 import os
@@ -7,7 +6,6 @@ import numpy as np
 from approx_2dg import combine, calc, toFixed
 from approx_1dg import calculate_linear_regression, plot_graph
 import plotting_func
-
 
 class TestApproximation(unittest.TestCase):
     
@@ -110,14 +108,14 @@ class LinearFunctionTestCase(unittest.TestCase):
         plotting_func.handle_plot_request()
 
         expected_image_data = os.path.join('static', 'images', 'graph1.png')
-        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)
 
 
 class QuadraticFunctionTestCase(unittest.TestCase):    
     @mock.patch('plotting_func.template')
     @mock.patch('plotting_func.bottle.request')    
     def test_quadratic_function(self, mock_request, mock_template):
-        mock_template.return_value = "Моковый шаблон"
+        mock_template.return_value = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
         form_data = FormsDict()        
         form_data['function'] = 'quadratic'
         form_data['a_coefficient'] = '1'        
@@ -129,7 +127,7 @@ class QuadraticFunctionTestCase(unittest.TestCase):
         mock_request.environ = {'wsgi.input': mock.Mock()}
         plotting_func.handle_plot_request()
         expected_image_data = os.path.join('static', 'images', 'graph1.png')
-        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)
 
 
 class PowerFunctionTestCase(unittest.TestCase):
@@ -150,7 +148,7 @@ class PowerFunctionTestCase(unittest.TestCase):
         plotting_func.handle_plot_request()
 
         expected_image_data = os.path.join('static', 'images', 'graph1.png')
-        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)
 
 
 class LinearFunctionErrorTestCase(unittest.TestCase):
@@ -172,7 +170,7 @@ class LinearFunctionErrorTestCase(unittest.TestCase):
         plotting_func.handle_plot_request()
 
         expected_image_data = 'static\\images\\graph0.png'
-        mock_template.assert_called_once_with('plotting.tpl', message="Ошибка: введите число!", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="РћС€РёР±РєР°: РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ!", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)
 
 
 class QuadraticFunctionErrorTestCase(unittest.TestCase):
@@ -195,7 +193,7 @@ class QuadraticFunctionErrorTestCase(unittest.TestCase):
         plotting_func.handle_plot_request()
 
         expected_image_data = 'static\\images\\graph0.png'
-        mock_template.assert_called_once_with('plotting.tpl', message="a не должно равняться 0", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="a РЅРµ РґРѕР»Р¶РЅРѕ СЂР°РІРЅСЏС‚СЊСЃСЏ 0", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)
 
 
 class PowerFunctionErrorTestCase(unittest.TestCase):
@@ -216,4 +214,4 @@ class PowerFunctionErrorTestCase(unittest.TestCase):
         plotting_func.handle_plot_request()
 
         expected_image_data = 'static\\images\\graph0.png'
-        mock_template.assert_called_once_with('plotting.tpl', message="Ошибка: введите число!", image_data=expected_image_data, title='Построение графиков', year=mock.ANY)
+        mock_template.assert_called_once_with('plotting.tpl', message="РћС€РёР±РєР°: РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ!", image_data=expected_image_data, title='РџРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ', year=mock.ANY)

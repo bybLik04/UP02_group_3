@@ -43,9 +43,9 @@ def approx1():
         if trigg:
             k, b, r2 = calculate_linear_regression(x, y)
             plot_graph(x, y, k, b)
-            return template('approxim_1deg.tpl', title='linear', image_data='static\images/graph5.png', year=datetime.now().year, k=k, b=b, r=r2, ex='')
+            return template('approxim_1deg.tpl', title='linear', image_data='static\images\graph5.png', year=datetime.now().year, k=k, b=b, r=r2, ex='')
         else:
-            return template('approxim_1deg.tpl', title='linear', image_data='static/images/graph5.png', year=datetime.now().year, k='err', b='err', r='err', ex='Ошибка входных данных!!')
+            return template('approxim_1deg.tpl', title='linear', image_data='static\images\graph5.png', year=datetime.now().year, k='err', b='err', r='err', ex='Ошибка входных данных!!')
     except:
-        return template('approxim_1deg.tpl', title='linear', image_data='static/images/graph5.png', year=datetime.now().year, k='err', b='err', r='err', ex='Ошибка входных данных!!')
+        return template('approxim_1deg.tpl', title='linear', image_data='static\images\graph_.png', year=datetime.now().year, k='err', b='err', r='err', ex='Ошибка входных данных!!')
 
